@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+body{
+    font-family: 'Outfit';
+    background: hsl(217, 54%, 11%);
+    font-size: 18px;
+}
+
+.container{
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+    .card-container{
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        background: hsl(216, 50%, 16%);
+        width: 300px;
+        color: hsl(0, 0%, 100%);
+        .title:hover{
+            color: hsl(178, 100%, 50%);
+            cursor: pointer;
+        }
+        .text-desc{
+            color: hsl(215, 51%, 70%);
+        }
+        .img-container{
+            position: relative;
+            .show-view{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-radius: 10px;
+                height: 98%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: hsla(178, 100%, 50%, 0.362);
+                img{
+                    transition: .5s ease;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    text-align: center;
+                }
+            }
+            img{
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .img-container:hover{
+            cursor: pointer;
+            .show-view{
+                opacity: 1;
+            }
+        }
+        .desc{
+            color: hsl(215, 51%, 70%);
+            display: flex;
+            justify-content: space-between;
+            .price{
+                color: hsl(178, 100%, 50%);
+                display: flex;
+                gap: 5px;
+                align-items: center;
+            }
+            .time{
+                display: flex;
+                gap: 5px;
+                align-items: center;
+            }
+        }
+        .hr{
+            color: hsl(215, 32%, 27%);
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: hsl(215, 51%, 70%);
+            img{
+                width: 40px;
+                height: 40px;
+            }
+            span{
+                color: hsl(0, 0%, 100%);
+            }
+            span:hover{
+                color: hsl(178, 100%, 50%);
+                cursor: pointer;
+            }
+        }
+    }
+}
